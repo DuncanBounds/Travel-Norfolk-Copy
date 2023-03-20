@@ -1,0 +1,79 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpoints" as *;
+
+.cta {
+  position: relative;
+  margin-top: 9rem;
+  height: 62.5vh;
+
+  @include respond(700) {
+    margin-top: 7rem;
+  }
+
+  @include respond(400) {
+  }
+}
+
+.cta__container {
+  position: relative;
+  height: 100%;
+  background-image: url(../../assets/cta_background.png);
+  background-size: cover;
+  background-position: center;
+
+  @include respond(1100) {
+    background-position: 25%;
+    background-repeat: no-repeat;
+  }
+
+  @include respond(900) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../../assets/cta_background.png);
+  }
+
+  @include respond(600) {
+    background-position: 40%;
+    background-repeat: no-repeat;
+  }
+
+  @include respond(400) {
+    height: calc(100vh - 7rem);
+    width: 100%;
+    background-image: none;
+  }
+}
+
+.cta__heading {
+  position: absolute;
+  top: 9.6rem;
+  left: calc(29rem - 16rem);
+  font-size: 4.4rem;
+  font-weight: 800;
+  color: $color-primary;
+  line-height: 1.2;
+
+  @include respond(1200) {
+    left: calc(10rem - 3.5rem);
+  }
+
+  @include respond(900) {
+    color: $color-white;
+  }
+
+  @include respond(700) {
+    left: 4.8rem;
+  }
+
+  @include respond(500) {
+    left: 2.4rem;
+  }
+
+  @include respond(400) {
+    display: none;
+  }
+}

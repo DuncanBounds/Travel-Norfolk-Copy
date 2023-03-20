@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/logo-t.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="script.js" defer></script>
+
+    <title>Travel Norfolk</title>
+  </head>
+  <body>
+    <header>
+      <!----------NAVIGATION SECTION---------->
+      <section class="navigation">
+        <!----------HAMBURGER NAVIGATION BTN ---------->
+
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <!---------HAMBURGER NAVIGATION----------->
+        <section class="hamburger-navbar">
+          <nav class="hamburger-navbar__container">
+            <div class="ham__search">
+              <input
+                type="search"
+                class="ham-search__input"
+                placeholder="Enter your search..."
+              />
+              <button class="ham-search__submit">
+                <img
+                  class="ham-search__icon"
+                  src="assets/search_icon.png"
+                  alt="search button icon"
+                />
+              </button>
+            </div>
+
+            <ul class="hamburger-navbar__list">
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">Journey Planner</a>
+              </li>
+
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">Travel</a>
+              </li>
+
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">Campaign TBC</a>
+              </li>
+
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">Resources</a>
+              </li>
+
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">Good journey</a>
+              </li>
+
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">News</a>
+              </li>
+
+              <li class="hamburger-navbar__item">
+                <a href="#" class="hamburger-navbar__link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <div class="navigation__container">
+          <!--------TRAVEL NORFOLK LOGO-------->
+
+          <div class="navigation__logo--left">
+            <img
+              class="logo--travelNorfolk"
+              src="assets/logo.png"
+              alt="Travel Nofolk logo"
+            />
+          </div>
+
+          <!--------NAVIGATION BAR-------->
+
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Journey Planner</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Travel</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Campaign TBC</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Resources</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Good journey</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">News</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Contact Us</a>
+              </li>
+            </ul>
+
+            <!-- ------950PX NAVLIST------  -->
+            <ul class="nav-list--sm">
+              <li class="nav-item--sm">
+                <a href="#" class="nav-link--sm"
+                  ><span>Journey Planner</span>
+                  <img
+                    src="assets/map_point.png"
+                    alt="A map pin icon"
+                    class="nav-icon--sm" />
+                  <img
+                    src="assets/map_point_white.png"
+                    alt="A map pin icon"
+                    class="nav-icon--sm"
+                    data-icon-map
+                /></a>
+              </li>
+            </ul>
+
+            <!-------- SEARCH BAR-------->
+
+            <div class="navbar__search">
+              <input
+                type="search"
+                class="search__input"
+                placeholder="Enter your search..."
+              />
+              <button class="search__submit">
+                <img
+                  class="search__icon"
+                  src="assets/search_icon.png"
+                  alt="search button icon"
+                />
+              </button>
+            </div>
+          </nav>
+
+          <!--------COUNTY COUNCIL LOGO-------->
+          <div class="navigation__logo--right">
+            <img
+              class="logo--countyCouncil"
+              src="assets/New-NCC-Logo-DoubleDecker-coloured-medium.png"
+              alt="Norfolk County Council Logo"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-------------------CTA SECTION--------------------->
+
+      <section class="cta">
+        <div class="cta__container">
+          <h1 class="cta__heading">Travel Smart, <br />Travel Norfolk</h1>
+
+          <form class="cta__form">
+            <div class="form__header">
+              <span
+                ><img
+                  class="form__logo"
+                  src="assets/logo-t.png"
+                  alt="Travel Norfolk logo"
+              /></span>
+              <span class="form__heading" data-heading-1>Journey Planner</span>
+              <span class="form__heading" data-heading-2
+                >Plan your Journey</span
+              >
+            </div>
+
+            <div class="form__inputs">
+              <!----------FORM LEAVE POINT INPUT---------->
+
+              <div class="form__group form__group--leaving" data-form-input>
+                <label for="leaving" class="form__label">Leaving from...</label>
+
+                <input
+                  id="leaving"
+                  type="search"
+                  class="form__input"
+                  data-search-1
+                  placeholder="From station, bus stop or postcode"
+                  autocomplete="off"
+                />
+
+                <div class="form__destinations">
+                  <ul
+                    class="form__destinations-list1"
+                    data-destinations-container-1
+                  >
+                    <template class="template" data-station-template-1>
+                      <li class="form__destinations-item">
+                        <span class="name" data-name-1></span
+                        ><img
+                          class="form__destinations-icon"
+                          data-image-1
+                          src=""
+                        />
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+                <img
+                  src="assets/opposite_arrows2.png"
+                  class="form__icon-arrows"
+                />
+              </div>
+
+              <!----------FORM DESTINATION POINT INPUT----------->
+
+              <div class="form__group form__group--leaving">
+                <label for="going" class="form__label">Going to...</label>
+
+                <input
+                  id="going"
+                  type="search"
+                  class="form__input"
+                  data-search-2
+                  placeholder="To station, bus stop or postcode"
+                  autocomplete="off"
+                />
+
+                <div class="form__destinations">
+                  <ul
+                    class="form__destinations-list2"
+                    data-destinations-container-2
+                  >
+                    <template class="template" data-station-template-2>
+                      <li class="form__destinations-item">
+                        <span class="name" data-name-2></span
+                        ><img
+                          class="form__destinations-icon"
+                          data-image-2
+                          src=""
+                        />
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </div>
+
+              <!----FORM TIME OF DEPARTURE----->
+              <div class="form__group group__time">
+                <label for="when" class="form__label" data-label-when
+                  >When...</label
+                >
+
+                <div class="form__time-btn">
+                  <div class="time-btn__img-box">
+                    <img
+                      src="assets/Icon feather-calendar.png"
+                      class="time-btn__img"
+                    />
+                  </div>
+                  <div class="time-btn__right">
+                    <div class="time-btn__time">
+                      <div class="time-btn__date">Today</div>
+                      <div class="time-btn__hour">Depart now</div>
+                    </div>
+
+                    <div class="time-btn__icon-box">
+                      <span class="time-btn__icon"> &#8964; </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__time-input">
+                  <input
+                    type="datetime-local"
+                    class="form__input"
+                    value="Departure time"
+                  />
+                </div>
+              </div>
+
+              <!---------- FORM SUBMIT ---------->
+              <div class="form__group form__group--submit" data-form-input>
+                <label class="form__label">&nbsp;</label>
+                <button type="submit" class="form__input form__submit">
+                  <span>Plan My Journey</span
+                  ><img
+                    src="assets/Icon feather-chevrons-right.png"
+                    alt="arrow icon"
+                    class="form__submit-icon"
+                  />
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- -------FEATURES-------- -->
+      <section class="features">
+        <div class="features__container">
+          <div class="feature">
+            <img
+              class="feature__icon icon__walk"
+              src="assets/Walk.png"
+              alt="A family walking"
+            />
+            <h3 class="feature__heading">Value proposition lorem</h3>
+            <p class="feature__paragraph">
+              Lorem ipsum dolor adip isicing elit. Magni labo riosam ad namge
+              vitae illum temporibus a beatae, cum veniam ade tempora aut
+              impedit.
+            </p>
+          </div>
+
+          <div class="feature">
+            <img
+              class="feature__icon"
+              src="assets/Bike.png"
+              alt="A person cycling"
+            />
+            <h3 class="feature__heading">Dolor value proposition</h3>
+            <p class="feature__paragraph">
+              Lorem ipsum dolor adip isicing elit. Magni labo riosam ad namge
+              vitae illum temporibus a beatae, cum veniam ade tempora aut
+              impedit.
+            </p>
+          </div>
+
+          <div class="feature">
+            <img
+              class="feature__icon"
+              src="assets/bus-icon.png"
+              alt="People at a bus stop"
+            />
+            <h3 class="feature__heading">Amet value proposition</h3>
+            <p class="feature__paragraph">
+              Lorem ipsum dolor adip isicing elit. Magni labo riosam ad namge
+              vitae illum temporibus a beatae, cum veniam ade tempora aut
+              impedit.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--------------- CTA2 SECTION------------->
+
+      <section class="cta2">
+        <div class="cta2__container">
+          <div class="cta2__feature">
+            <h2 class="cta2__heading">Nemo enim ipsam <br />voluptatem quia</h2>
+            <p class="cta2__paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              itaque assumenda quidem doloribus dolores laborum dicta dolorum
+              repellat consequatur quos ratione minima fugiat tempore sit
+              veritatis deserunt!
+            </p>
+
+            <a href="#" class="cta2__link">
+              <img
+                class="cta2__link-icon"
+                src="assets/arrow_right.png"
+                alt="A right-arrow icon"
+              />
+              <span class="cta2__link-text">Lorem call to action</span>
+            </a>
+          </div>
+
+          <div class="cta2__img-box"></div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

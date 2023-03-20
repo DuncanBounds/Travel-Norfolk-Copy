@@ -1,0 +1,77 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+
+.hamburger-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  background-color: rgba($color-white, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+
+  //transition: ;
+
+  &--visible {
+    right: 0;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.hamburger-navbar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $margin-md;
+}
+
+.hamburger-navbar__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: $margin-md;
+}
+
+.hamburger-navbar__item {
+  list-style: none;
+}
+
+.hamburger-navbar__link:link,
+.hamburger-navbar__link:visited {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $color-primary;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.hamburger-navbar__link {
+  color: $color-primary;
+}
+
+.hamburger-navbar__link--default {
+  color: $color-primary;
+}
+
+.hamburger-navbar__link--unfocused {
+  color: $color-grey;
+  opacity: 0.5;
+}
+
+.hamburger-navbar__link--hover {
+  color: $color-primary--dark;
+  opacity: 1;
+}

@@ -1,0 +1,167 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/breakpoints" as *;
+
+
+///////////////////////////////////////////////////////
+//--------SEARCH BAR IN NAVIGATION-----------------
+
+.navbar__search {
+  position: absolute;
+  z-index: 1000;
+  right: $margin-sm;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $margin-sm;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1000rem;
+  transition: all 1s;
+
+  &:focus-within {
+    width: 29rem;
+    // border: 0.1rem solid $color-primary;
+
+    .search__input {
+      right: 3rem;
+      width: calc(100% - 3rem);
+      opacity: 1;
+      background-color: $color-grey;
+      cursor: initial;
+    }
+  }
+
+  &:hover .search__submit {
+    background-color: $color-secondary;
+  }
+
+  &:focus .navbar__list {
+    opacity: 0.2;
+  }
+
+  @include respond(950) {
+    // display: none;
+    right: 0;
+  }
+
+  @include respond(700) {
+    display: none;
+  }
+}
+
+/*
+.search__left {
+  padding-right: $margin-sm;
+}
+*/
+
+.search__input {
+  //display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 2.8rem;
+  width: 3rem;
+  background-color: $color-grey;
+  padding: 0 $margin-xs;
+  border: 0.1rem solid transparent;
+  outline: none;
+  border-radius: 1000rem;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:focus {
+    border: none;
+  }
+
+  &::placeholder {
+    font-family: $font-primary;
+    color: $color-primary;
+  }
+}
+
+.search__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  margin-left: auto;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.search__icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+/*
+.search__right {
+  padding-left: $margin-sm;
+  border-left: 0.2rem solid $color-grey;
+}
+*/
+
+///////////////////////////////////////////////////////////////////
+//--------------------HAMBURGER NAV SEARCH BAR-----------------------
+
+.ham__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.4rem 0.4rem;
+  background-color: $color-secondary;
+  border-radius: 1000rem;
+  transition: all 1s;
+}
+
+.ham-search__input {
+  height: 2.8rem;
+  width: 24rem;
+  padding: 0 $margin-xs;
+  border: 0.2rem solid transparent;
+  outline: none;
+  border-radius: 1000rem;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    border: 0.2rem solid $color-primary;
+  }
+
+  &::placeholder {
+    font-family: $font-primary;
+    color: $color-primary;
+  }
+}
+
+.ham-search__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  margin-left: 0.4rem;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-white;
+  }
+}
+
+.ham-search__icon {
+  height: 2rem;
+  width: 2rem;
+}

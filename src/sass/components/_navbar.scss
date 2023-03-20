@@ -1,0 +1,156 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.navbar {
+  position: relative;
+  flex: 0 1 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(1500) {
+    flex: 0 1 85%;
+  }
+
+  @include respond(950) {
+    flex: 0 1 90%;
+    padding-right: 2.4rem;
+  }
+
+  @include respond(700) {
+    flex: 0 1 40%;
+    height: 100%;
+    padding-right: 0;
+    border-right: 0.2rem solid $color-grey;
+  }
+
+  @include respond(600) {
+    flex: 0 1 40%;
+  }
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $margin-md;
+
+  @include respond(1500) {
+    gap: $margin-sm;
+  }
+
+  @include respond(1200) {
+    gap: $margin-xs;
+  }
+
+  @include respond(700) {
+    display: none;
+  }
+}
+
+.navbar__item {
+  list-style: none;
+}
+
+.navbar__link:link,
+.navbar__link:visited {
+  color: $color-primary;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar__link:active {
+}
+
+.navbar__link--default {
+  color: $color-primary;
+}
+
+.navbar__link--unfocused {
+  color: $color-grey;
+  opacity: 0.5;
+}
+
+.navbar__link--hover {
+  color: $color-primary--dark;
+  opacity: 1;
+}
+
+.nav-list--sm {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+
+  @include respond(700) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include respond(500) {
+    padding: 0 $margin-xs;
+  }
+
+  @include respond(400) {
+    justify-content: flex-end;
+  }
+}
+
+.nav-item--sm {
+  list-style: none;
+}
+
+.nav-link--sm:link,
+.nav-link--sm:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $margin-sm;
+  font-size: 1.2rem;
+  color: $color-primary;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  @include respond(500) {
+    gap: $margin-xxs;
+  }
+
+  @include respond(400) {
+    justify-content: flex-end;
+  }
+
+  & span {
+    @include respond(400) {
+      display: none;
+    }
+  }
+  &:hover .nav-icon--sm {
+    transform: scale(1.15);
+  }
+}
+
+.nav-icon--sm {
+  z-index: 101;
+  height: 3.2rem;
+  border: none;
+  transition: all 0.3s;
+}
+
+[data-icon-map] {
+  display: none;
+
+  @include respond(400) {
+    display: inline-block;
+    position: absolute;
+    height: 3rem;
+    bottom: -1rem;
+    z-index: 100;
+  }
+}

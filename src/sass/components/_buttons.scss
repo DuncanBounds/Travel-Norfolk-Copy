@@ -1,0 +1,81 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpoints" as *;
+
+////////////////////////////////////////////////
+//--- HAMBURGER BUTTON TO OPEN AND CLOSE NAV---
+
+//CHECKBOX
+
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+    background-color: $color-white;
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1.6rem;
+    right: 4rem;
+    z-index: 100000000;
+    text-align: center; //for the lines that form the button icon
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-grey;
+    }
+
+    @include respond(700) {
+      display: inline-block;
+    }
+  }
+}
+
+.navigation__icon {
+  position: relative;
+  margin-top: 1.8rem;
+
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 0.3rem;
+    background-color: $color-primary;
+    display: inline-block;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 3rem;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -0.8rem;
+  }
+
+  &::after {
+    top: 0.8rem;
+  }
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+
+  &::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

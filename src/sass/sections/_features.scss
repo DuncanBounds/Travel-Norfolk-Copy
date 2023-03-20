@@ -1,0 +1,43 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.feature {
+  @include respond(400) {
+    display: none;
+  }
+}
+
+.features__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $margin-md;
+  margin-top: 12.8rem;
+  margin-bottom: 10.4rem;
+  padding: 0 calc(29rem - 16rem);
+
+  @include respond(1200) {
+    padding: 0 calc(10rem - 3.5rem);
+  }
+
+  @include respond(1100) {
+    padding: 0 3.5rem;
+  }
+
+  @include respond(1000) {
+    margin-top: 17.6rem;
+  }
+
+  @include respond(950) {
+    flex-direction: column;
+  }
+
+  @include respond(600) {
+    margin-top: 28.6rem;
+  }
+
+  @include respond(400) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

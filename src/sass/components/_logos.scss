@@ -1,0 +1,77 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpoints" as *;
+
+///////////////////////////////////////////
+//----TRAVEL NORFOLK LOGO IN NAVIGATION-----
+
+.navigation__logo--left {
+  flex: 0 1 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include respond(1500) {
+    flex: 0 1 15%;
+  }
+
+  @include respond(700) {
+    flex: 0 1 40%;
+    height: 100%;
+    border-right: 0.2rem solid $color-grey;
+  }
+
+  @include respond(500) {
+    flex: 0 1 35%;
+  }
+
+  @include respond(500) {
+    flex: 0 1 40%;
+  }
+}
+
+.logo--travelNorfolk {
+  height: 5.4rem;
+
+  @include respond(1200) {
+    height: 4.2rem;
+  }
+}
+
+////////////////////////////////////////////////
+//----NORFOLK COUNTY COUNCIL LOGO IN NAVIGATION--
+
+.navigation__logo--right {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    left: -0.1rem;
+    top: -25%;
+    height: 150%;
+    width: 0.1rem;
+    background-color: $color-grey;
+
+    @include respond(950) {
+      display: none;
+    }
+  }
+}
+
+.logo--countyCouncil {
+  position: relative;
+  flex: 0 1 5%;
+  height: 2.6rem;
+  padding-left: $margin-sm;
+
+  @include respond(1200) {
+    height: 2.2rem;
+    padding-left: $margin-xs;
+  }
+
+  @include respond(950) {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/colors" as *;
+
+/*
+This doesn't appear to be working. Consult Steve and Rich as to why.
+*/
+
+@font-face {
+  font-family: myFont;
+  src: url(../assets/font2.woff2) format("woff2");
+}
+
+$font-primary: "Open Sans", sans-serif;

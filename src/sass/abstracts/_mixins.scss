@@ -1,0 +1,13 @@
+//SETTINGS TO HIDE AND SHOW CONTENT
+
+@mixin invisible {
+  display: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@mixin visible {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+}

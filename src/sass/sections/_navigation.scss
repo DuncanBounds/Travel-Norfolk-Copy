@@ -1,0 +1,28 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpoints" as *;
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000000;
+  height: 9rem;
+  margin: 0 auto;
+  background-color: $color-white;
+
+  @include respond(700) {
+    height: 7rem;
+  }
+}
+
+.navigation__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(700) {
+    justify-content: normal;
+  }
+}

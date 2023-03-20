@@ -1,0 +1,143 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpoints" as *;
+
+.cta2 {
+  @include respond(400) {
+    display: none;
+  }
+}
+
+.cta2__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13.6rem;
+  background-color: $color-tertiary;
+
+  @include respond(700) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.cta2__feature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: $margin-md;
+  margin-left: calc(29rem - 10rem);
+  padding: $margin-lg 0;
+  padding-right: $margin-lg;
+
+  @include respond(1500) {
+    margin-left: 16.5rem;
+  }
+
+  @include respond(1200) {
+    margin-left: 10rem;
+  }
+
+  @include respond(1000) {
+    margin-left: calc(10rem - (3.5rem - $margin-md));
+  }
+
+  @include respond(950) {
+    gap: $margin-sm;
+  }
+
+  @include respond(700) {
+    order: 2;
+    margin-left: 0;
+    padding: $margin-lg calc($margin-md + 2.4rem);
+  }
+}
+
+.cta2__heading {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: $color-primary;
+
+  @include respond(1500) {
+    font-size: 3.6rem;
+  }
+
+  @include respond(1100) {
+    font-size: 3rem;
+  }
+
+  @include respond(950) {
+    font-size: 2.6rem;
+  }
+}
+
+.cta2__paragraph {
+  color: $color-primary;
+  font-size: 1.4rem;
+  line-height: 2;
+
+  @include respond(1100) {
+    line-height: 1.6;
+  }
+}
+
+.cta2__link:link,
+.cta2__link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $margin-xs;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.cta2__link:hover .cta2__link-text,
+.cta2__link:active .cta2__link-text {
+  border-bottom: 0.2rem solid $color-primary;
+}
+
+.cta2__link-icon {
+  height: 2.2rem;
+}
+
+.cta2__link-text {
+  padding-bottom: $margin-xxs;
+  border-bottom: 0.2rem transparent solid;
+  transition: all 0.3s;
+}
+
+.cta2__img-box {
+  flex: 0 1 50%;
+  height: 100%;
+  background-image: url(../../assets/cta2_img.png);
+  background-size: cover;
+  background-position: center;
+
+  @include respond(1000) {
+    flex: 0 1 40%;
+  }
+
+  @include respond(700) {
+    order: 1;
+    padding: 16rem 0;
+    // display: inline-block;
+    //height: 40rem;
+    width: 100%;
+    //flex: 0 1 100%;
+  }
+}
+
+/*
+.cta2__img {
+  max-width: 100%;
+  object-fit: cover;
+
+  @include respond(950) {
+    height: 100%;
+  }
+}
+*/
